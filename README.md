@@ -1,9 +1,14 @@
-# skillcheck
+<p align="center">
+  <img src="assets/banner.webp" alt="skillcheck" width="100%">
+</p>
 
-[![CI](https://github.com/celaldrg/skillcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/celaldrg/skillcheck/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue)
-![Zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)
+<p align="center">
+  <a href="https://github.com/celaldrg/skillcheck/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/celaldrg/skillcheck/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <img alt="Python 3.9+" src="https://img.shields.io/badge/python-3.9%2B-blue">
+  <img alt="Zero dependencies" src="https://img.shields.io/badge/dependencies-0-brightgreen">
+  <a href="https://github.com/celaldrg/skillcheck/releases"><img alt="Release" src="https://img.shields.io/github/v/release/celaldrg/skillcheck?sort=semver"></a>
+</p>
 
 **Lint Agent Skills before your agent loads them.**
 
@@ -14,6 +19,11 @@ Agent Skills are folders with a `SKILL.md` file that Claude Code, OpenAI Codex, 
 - Finds links to bundled files that don't exist or point outside the skill folder.
 - Warns about descriptions that never say *when* to use the skill, bodies that are too long for the context window, duplicate skill names, and scripts that aren't executable.
 - Text, JSON and GitHub Actions annotation output. No dependencies, Python 3.9+.
+
+<p align="center">
+  <img src="assets/terminal-demo.webp" alt="skillcheck, real terminal output" width="860">
+  <br><sub>Real output: <code>skillcheck examples/skills examples/broken</code></sub>
+</p>
 
 ## Install
 
@@ -37,6 +47,11 @@ skillcheck --ignore unknown-key # skip a rule
 Exit codes: `0` clean, `1` errors (or warnings with `--strict`), `2` no skills found.
 
 ## Example
+
+<p align="center">
+  <img src="assets/demo.gif" alt="skillcheck running in a terminal" width="860">
+  <br><sub>Recorded with <a href="https://github.com/charmbracelet/vhs">vhs</a>.</sub>
+</p>
 
 Run against this repo's [examples](examples):
 
